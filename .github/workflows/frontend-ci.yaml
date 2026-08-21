@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "starter/frontend/**"
+      - "frontend/**"
   workflow_dispatch:
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: starter/frontend
+        working-directory: frontend
 
     steps:
       - name: Checkout code
@@ -24,13 +24,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: "starter/frontend/.nvmrc"
+          node-version-file: "frontend/.nvmrc"
 
       - name: Cache npm dependencies
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('starter/frontend/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('frontend/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
@@ -46,7 +46,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: starter/frontend
+        working-directory: frontend
 
     steps:
       - name: Checkout code
@@ -55,13 +55,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: "starter/frontend/.nvmrc"
+          node-version-file: "frontend/.nvmrc"
 
       - name: Cache npm dependencies
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('starter/frontend/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('frontend/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
@@ -82,7 +82,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: starter/frontend
+        working-directory: frontend
 
     steps:
       - name: Checkout code
@@ -91,13 +91,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version-file: "starter/frontend/.nvmrc"
+          node-version-file: "frontend/.nvmrc"
 
       - name: Cache npm dependencies
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('starter/frontend/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('frontend/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
